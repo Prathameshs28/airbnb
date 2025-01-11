@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="logo-header">
+        <img class="logo" src="./assets/logo.svg" alt="" />
+        <div class="options"> 
+          <button type="button" class="header-btn">Stays</button>
+          <button type="button" class="header-btn mute-clr">Experiences</button>
+        </div>
+        <div class="profile">
+          <p  class="header-btn airbnb-home">Airbnb your home</p>
+          <p class="header-btn airbnb-home">
+             <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+          </svg>
+        </p>
+          <p class="profile-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg>
+          </p>
+        </div>
+      </div>
+      <div class="search-bar">
+        <div class="search-option">
+          <p class="search-option-header">Where</p>
+          <p class="gray">Seach destinations</p>
+        </div>
+        <hr  class="search-hr hr-border" />
+        <div class="search-option">
+          <p class="search-option-header">Check in </p>
+          <p  class="gray">Add dates</p>
+        </div >
+        <hr class="search-hr hr-border" />
+        <div class="search-option">
+          <p class="search-option-header">Check out </p>
+          <p  class="gray">Add dates</p>
+        </div>
+        <hr class="search-hr hr-border" />
+        <div class="search-option search-here">
+          <div>
+            <p class="search-option-header">Who </p>
+            <p  class="gray">Add guests</p>
+          </div>
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24 " fill="#fff" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-border" />
+    <div class="filters">
+      
+      <div class="property-type">
+        <div class="arrow-circle">
+          <img class="" src="./assets/left-arrow.svg" alt="" />
+        </div>
+        <div class="property-list">
+          <div> <img class="p-list" src="./assets/i1.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i2.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i3.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i4.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i5.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i6.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i7.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i5.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i2.jpeg" alt="" /></div>
+          <div> <img class="p-list" src="./assets/i3.jpeg" alt="" /></div>
+        </div>
+        <div class="arrow-circle">
+          <img class="" src="./assets/right-arrow.svg" alt="" />
+        </div>
+      </div>
+
+        <button class="filter-btn1" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-sliders" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+          </svg>
+          Filter
+        </button>
+        
+        <button class="filter-btn2" type="button">
+          <span>Display total before taxes</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-toggle-on" viewBox="0 0 16 16">
+            <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"/>
+          </svg>
+        </button>
+
+    </div>
+    <div class="properties-container">
+      <div class="properties">
+        <div class="card-container">
+          <div class="card-image">
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-1172331175122017434/original/c0f97265-a747-4b6f-a7b4-31185cab4272.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Udaipur, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">4.0</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">511 Km Away</p>
+            <p class="m-0">10-24 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;15,525 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/74fc010b-e809-42ff-a1ee-d58bc4cfd202.jpg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Jalandhar, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5.0</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">348 Km Away</p>
+            <p class="m-0">10-15 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;29,671 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-973612202639577969/original/b537c57b-300e-4c31-b610-b193b06ea7b1.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Jaipur, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">4.5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">348 Km Away</p>
+            <p class="m-0">13-18 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;22,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-1035359565816776697/original/bbf7c101-8a3d-4054-9095-aa22935e9032.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Pune, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">3.5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">558 Km Away</p>
+            <p class="m-0">20-25 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;29,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-1282336331218799848/original/37d989f7-4942-4c6a-8a19-15e67de7e0d9.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Kolhapur, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">3.5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">229 Km Away</p>
+            <p class="m-0">10-25 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;77,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/hosting/Hosting-563544001015064327/original/71137cd9-03f6-4c79-9cbd-b6fbc4fdac5f.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">New Delhi, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">3.5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">444 Km Away</p>
+            <p class="m-0">01-18 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;77,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/hosting/Hosting-54015193/original/1e247a84-bca1-4484-bb18-ebffeab6f0dc.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Noida, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">3.5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">654 Km Away</p>
+            <p class="m-0">01-18 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;12,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src=" https://a0.muscache.com/im/pictures/d3e5d98b-95ad-46f6-bdb1-f2edc5cb29e3.jpg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Mumbai, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">643 Km Away</p>
+            <p class="m-0">04-19 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;42,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/83d4854f-a41b-4441-b008-b19fee6ea596.jpg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Jaipur, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">454 Km Away</p>
+            <p class="m-0">05-12 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;82,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-902766551931055111/original/3aab211a-8192-44ea-85f0-44a04a6d5cab.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Hydrabad, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">555 Km Away</p>
+            <p class="m-0">07-22 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;12,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/miso/Hosting-1298391228406526949/original/c43cf5ed-6538-4c91-8d05-f7d3bf71601e.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">New Delhi, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">876 Km Away</p>
+            <p class="m-0">04-12 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;22,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card-image">
+            <button class="guest-fav">Guest favourite</button>
+            <img class="save-to-wishlist" src="./assets/heart.svg" alt="" />
+            <img
+              src="https://a0.muscache.com/im/pictures/hosting/Hosting-1008647084311789887/original/48005153-92dc-4789-95d2-e0587f8697d8.jpeg?im_w=720&im_format=avif"
+              alt=""
+              class="property-img" />
+          </div>
+          <div class="card-header">
+            <h3 class="property-name">Goa, India</h3>
+            <div>
+              <img class="star-rating-img" src="./assets/star.svg" alt="" />
+              <span class="rate-value">5</span>
+            </div>
+          </div>
+          <div class="card-details">
+            <p class="m-0">876 Km Away</p>
+            <p class="m-0">04-12 Jan</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">&#8377;22,497 &nbsp;</span>
+            <span> night</span>
+          </div>
+        </div>
+      </div>
+      <div class="show-map-tag">
+        <button class="show-map">
+          Show map
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-map-fill"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+   
+
+    <div class="explore-more">
+      <p class="expore-more-msg">Continue exploring amazing pools</p>
+      <button class="show-more-btn">Show more</button>
+    </div>
+
+    <div class="footer-section">
+      <p class="footer-header">Inspiration for future getaways</p>
+      <div class="menues-list">
+        <div class="footer-menus">
+          <p class="h-m0 fs-18 popular">Popular</p>
+          <p class="gray fs-18">Arts & culture</p>
+          <p class="gray fs-18">Outdoors</p>
+          <p class="gray fs-18">Mountains</p>
+          <p class="gray fs-18">Beach</p>
+          <p class="gray fs-18">Unique stays</p>
+          <p class="gray fs-18">Categories</p>
+          <p class="gray fs-18">Things to do</p>  
+        </div>
+        <hr class="menu-underline hr-border" />
+      </div>
+
+      <div class="popular-card">
+        <div class="popular-list">
+          <p class="h-m0">Canmore</p>
+          <span class="gray">Flat rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Benalmádena</p>
+          <span class="gray">Flat rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Marbella</p>
+          <span class="gray">Flat rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Mijas</p>
+          <span class="gray">Flat rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Prescott</p>
+          <span class="gray">Cottage rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Scottsdale</p>
+          <span class="gray">Apartment rentals</span>
+        </div>
+      </div>
+
+      <div class="popular-card">
+        <div class="popular-list">
+          <p class="h-m0">Tucson</p>
+          <span class="gray">House rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Jasper</p>
+          <span class="gray">Cabin rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Mountain View</p>
+          <span class="gray">Cabin rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Devonport</p>
+          <span class="gray">Cottage rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Mallacoota</p>
+          <span class="gray">Beach house rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Ibiza</p>
+          <span class="gray">Holiday rentals</span>
+        </div>
+      </div>
+      <div class="popular-card">
+        <div class="popular-list">
+          <p class="h-m0">Anaheim</p>
+          <span class="gray">Beach house rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Monterey</p>
+          <span class="gray">House rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Paso Robles</p>
+          <span class="gray">Cottage rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Santa Barbara</p>
+          <span class="gray"  >Flat rentals</span>
+        </div>
+        <div class="popular-list">
+          <p class="h-m0">Sonoma</p>
+          <span>House rentals</span>
+        </div>
+        <div class="popular-list">
+          <div class="h-m0 show-more">
+            Show more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-down arrow"
+              viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt hr-border"/>
+
+      <div class="about-support">
+        <div class="support">
+          <p class="h-m0">Support</p>
+          <p class="gray">Help Centre</p>
+          <p class="gray">AirCover</p>
+          <p class="gray">Anti-discrimination</p>
+          <p class="gray">Disability support</p>
+          <p class="gray">Cancellation options</p>
+          <p class="gray">Report neighbourhood concern</p>
+        </div>
+        <div class="hosting">
+          <p class="h-m0">Hosting</p>
+          <p class="gray">Airbnb your home</p>
+          <p class="gray">AirCover for Hosts</p>
+          <p class="gray">Hosting resources</p>
+          <p class="gray">Community forum</p>
+          <p class="gray">Hosting responsibly</p>
+          <p class="gray">Join a free Hosting class</p>
+          <p class="gray">Find a co‑host</p>
+        </div>
+        <div class="airbnb">
+          <p  class="h-m0">Airbnb</p>
+          <p class="gray">Newsroom</p>
+          <p class="gray">New features</p>
+          <p class="gray">Careers</p>
+          <p class="gray">Investors</p>
+          <p class="gray">Airbnb.org emergency stays</p>
+        </div>
+      </div>
+
+      <hr class="mt hr-border" />
+      <div class="social-footer h-m0">
+        <p>© 2025 Airbnb, Inc. &nbsp; · Privacy &nbsp; · Terms &nbsp; · Sitemap  &nbsp; ·Company details</p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+          </svg>
+          English(IN) &nbsp; &nbsp; ₹ INR
+          &nbsp;
+          &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+          &nbsp;
+          &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+          </svg>
+          &nbsp;
+          &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+        
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
